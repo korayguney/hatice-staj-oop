@@ -51,11 +51,19 @@ public class Student {
     public void setSchoolNumber(int schoolNumber) {
         this.schoolNumber = schoolNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Student's age  is " +  this.getAge() + " and name is " + this.getFullname();
+    }
 }
 
 class TestClass {
     public static void main(String[] args) {
         Student student1 = new Student();
+        student1.setAge(18);
+        student1.setFullname("Ali Veli");
+        System.out.println("Student :" + student1);
         System.out.println("Age :" + student1.getAge());
         System.out.println("Name :" + student1.getFullname());
     }
